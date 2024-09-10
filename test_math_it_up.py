@@ -54,6 +54,8 @@ def test_median():
   assert math_it_up.median([1,3]) == 2
 
 def test_mode():
-  assert not math_it_up.mode([0,9203921,0,832913871,0,0,1,73823,17]) == 0 #passes the wrong mode
+  assert math_it_up.mode([0,9203921,0,832913871,0,0,1,73823,17]) == [0] 
+  assert not math_it_up.mode([0,9203921,0,832913871,0,0,1,73823,17]) == [17] #passes the wrong mode 
   assert math_it_up.mode([2,4,2,4]) == [2,4]
+  assert math_it_up.mode([3,4,3,54,2,3,3]) == [3]
   assert math_it_up.mode([9,8,0,576]) == [9,8,0,576]
