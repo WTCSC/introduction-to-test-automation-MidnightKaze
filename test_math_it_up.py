@@ -43,17 +43,17 @@ def test_is_odd():
   assert math_it_up.is_odd(-7)
 
 def test_mean():
-  assert math_it_up.mean([3,3,3]) # == 3
-  assert math_it_up.mean([25,100,50,50]) # == 56.25
-  assert math_it_up.mean([127]) # == 127
+  assert not math_it_up.mean([3,3,3]) == 4 #passes the wrong mean
+  assert math_it_up.mean([25,100,50,50]) == 56.25
+  assert math_it_up.mean([127]) == 127
 
 def test_median():
-  assert math_it_up.median([9,3,7]) # == 7
-  assert math_it_up.median([238013132,32,584,237183,1]) # == 584
-  assert math_it_up.median([0,7382,0,8293,0,73493290,17]) # == 17
-  assert math_it_up.median([1,3]) # == 2
+  assert math_it_up.median([9,3,7]) == 7
+  assert math_it_up.median([238013132,32,584,237183,1]) == 584
+  assert math_it_up.median([0,7382,0,8293,0,73493290,17]) == 17
+  assert math_it_up.median([1,3]) == 2
 
 def test_mode():
-  assert math_it_up.mode([0,9203921,0,832913871,0,0,1,73823,17]) # == 0
-  assert math_it_up.mode([2,4,2,4]) # == 2,4
-  assert math_it_up.mode([9,8,0,576]) # == all of them
+  assert not math_it_up.mode([0,9203921,0,832913871,0,0,1,73823,17]) == 0 #passes the wrong mode
+  assert math_it_up.mode([2,4,2,4]) == [2,4]
+  assert math_it_up.mode([9,8,0,576]) == [9,8,0,576]
